@@ -1,0 +1,10 @@
+datetime
+newsapi-python
+TextBlob
+matplotlib
+numpy
+pandas
+oandapyV20
+psycopg2
+vaderSentiment
+python-twitter
