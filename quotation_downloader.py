@@ -9,11 +9,11 @@ import os, sys
 import logging
 from datetime import datetime, timedelta
 
-oanda_av_inst_full = pd.read_csv(os.path.join('toad', 'available_instruments.csv'), sep='\t')
+oanda_av_inst_full = pd.read_csv(os.path.join('data', 'available_instruments.csv'), sep='\t')
 oanda_av_inst = oanda_av_inst_full['name']
 
-start = datetime(2018, 1, 1)
-end = datetime.today() - timedelta(1)
+start = datetime(2015, 1, 1)
+end = datetime.today()
 
 myPath = '/home/alessandro/Documenti/oanda_helper/data/market_data'
 
@@ -60,7 +60,7 @@ for strumento in oanda_av_inst:
     for date in dates:
         mypickle = os.path.join(myPath, strumento,f"{date.strftime('%Y%m%d')}_{strumento}.pickle")
         if file_folder_exists(mypickle):
-            logger.info(f"File {mypickle} already found, skipping")
+            #logger.info(f"File {mypickle} already found, skipping")
             continue
         try:
             d1=date.strftime('%Y-%m-%d')

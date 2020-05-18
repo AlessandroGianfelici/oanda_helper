@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import oandapyV20
 import oandapyV20.endpoints.instruments as instruments
-from toad.constants import oanda_token, newsapi_token
+from toad.constants import oanda_token
 from toad.domain import Measurement
 
 
